@@ -27,3 +27,10 @@ jobs:
       - name: Lint with flake8
         run: |
           pipenv run flake8 .
+
+  flake8:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint with flake8
+        run: |
+          pipenv run flake8 .
