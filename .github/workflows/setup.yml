@@ -35,5 +35,3 @@ jobs:
       - name : Tests com cobertura
         run: |
           pipenv run pytest --cov=base
-          pipenv run codecov
-
