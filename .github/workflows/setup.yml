@@ -9,12 +9,12 @@ jobs:
 
     services:
       postgres:
-        image: postgresql
+        image: postgresql:14.4
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: postgres
-        ports: [ '5432:5432' ]
+        ports: ['5432:5432']
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
