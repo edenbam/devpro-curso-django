@@ -118,10 +118,10 @@ USE_TZ = True
 # BASE_DIR: Variável que calcula a raiz do projeto
 # O segundo parâmetro passado para o join é o diretório onde ficará os arquivos estáticos localmente
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URAL = '/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 # Default primary key field type
