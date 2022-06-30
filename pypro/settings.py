@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'collectfast'
     'django.contrib.staticfiles',
     'base',
 ]
@@ -124,6 +125,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
+COLLECTFAST_ENABLED = False
+
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 # Storage configuration in S3 AWS
@@ -137,6 +140,8 @@ if AWS_ACCESS_KEY_ID:
     AWS_QUERYSTRING_AUTH = True  # Para gerar URL's assinadas
     AWS_S3_CUSTOM_DOMAIN = None  # Para utilizar o próprio domínio do S3
     AWS_DEFAULT_ACL = 'private'  # Para que os arquivos do S# não fiquem públicos
+
+    COLLECTFAST_ENABLED = True
 
     # Static Assets
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'  # É uma classe da lib django-s3-folder-storage que
